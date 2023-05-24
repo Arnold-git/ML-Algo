@@ -16,9 +16,9 @@ class Centroid:
 
 
 def get_k_means(user_feature_map, num_features_per_user, k):
-   
+
     random.seed(42)
-    # Gets the initial users, to be used as centroids.
+
     inital_centroid_users = random.sample(sorted(list(user_feature_map.keys())), k)
     centroids = [Centroid(user_feature_map[user]) for user in  inital_centroid_users]
     for _ in range(10):
